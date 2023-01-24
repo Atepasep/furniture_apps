@@ -14,13 +14,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Furniture App',
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
         primaryColor: kPrimaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        colorScheme:
+            ColorScheme.fromSwatch().copyWith(secondary: kPrimaryColor),
       ),
-      home: ProductScreen(),
+      home: const ProductScreen(),
     );
   }
 }
